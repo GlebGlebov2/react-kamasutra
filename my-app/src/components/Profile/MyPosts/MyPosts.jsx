@@ -13,6 +13,7 @@ function MyPosts(){
                 <Post/>
                 <Post/>
                 <Post/>
+                sgrgerg
             </ul>
         </div>
     );
