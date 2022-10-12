@@ -9,11 +9,10 @@ function MyPosts(){
                 <button>add post</button>
             </div>
             <ul>
+                <Post message="Здору"/>
+                <Post message="покау"/>
                 <Post/>
                 <Post/>
-                <Post/>
-                <Post/>
-                sgrgerg
             </ul>
         </div>
     );
