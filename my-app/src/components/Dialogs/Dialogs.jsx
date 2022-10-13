@@ -28,17 +28,17 @@ function Dialogs(props){
         {id:2, message:'Сообщение 2'},
         {id:3, message:'Сообщение 3'},
     ];
+
+    const dialogsElements = dialogsData.map(d=><DialogsItem name={d.name} key={d.id}/>);
+
+    const messagesElements = messagesData.map(m =><MessagesItem message={m.message} key={m.id}/>);
     return(
         <div className={classes.dialogs}>
             <ul className={classes.dialogs_list}>
-                <DialogsItem name={dialogsData[0].name} id={dialogsData[0].id}/>
-                <DialogsItem name={dialogsData[1].name} id={dialogsData[1].id}/>
-                <DialogsItem name="Махмуд" id="3"/>
+            {dialogsElements}
             </ul>
             <ul className={classes.messages_list}>
-                <MessagesItem message={messagesData[0].message} id={messagesData[0].id}/>
-                <MessagesItem message={messagesData[1].message} id={messagesData[1].id}/>
-                <MessagesItem message="Сообщение 3"/>
+                {messagesElements}
             </ul>
         </div>
     );
