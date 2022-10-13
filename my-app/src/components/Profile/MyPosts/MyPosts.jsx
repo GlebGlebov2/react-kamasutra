@@ -1,18 +1,22 @@
 import classes from './MyPosts.module.css';
 import Post from './Post/Post';
-function MyPosts(){
+function MyPosts(props){
+    const postData =[
+        {id:1, message:'Здроу', likesCount:3},
+        {id:2, message:'покау', likesCount:54},
+    ];
     return(
         <div>
-            My post
+            <h3>My post</h3>
             <div>
-                <textarea></textarea>
+                <div>
+                    <textarea></textarea>
+                </div>
                 <button>add post</button>
             </div>
             <ul>
-                <Post message="Здору"/>
-                <Post message="покау"/>
-                <Post/>
-                <Post/>
+                <Post message={postData[0].message} likesCount={postData[0].likesCount}/>
+                <Post message={postData[1].message} likesCount={postData[1].likesCount}/>
             </ul>
         </div>
     );

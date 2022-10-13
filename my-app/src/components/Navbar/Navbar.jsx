@@ -18,18 +18,5 @@ function Navbar(){
     );
 
 };
-const link = document.querySelectorAll('.cl');
-function cl(){
-    link.forEach(l=>{
-        const lk = l;
-        l.addEventListener('click', function(){
-            lk.classList.remove('cl--active');
-            l.classList.add('cl--active');
-            console.log(this);
-            //
-        });
-    });
-};
-// cl();
 
 export default Navbar;

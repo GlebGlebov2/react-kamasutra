@@ -1,14 +1,10 @@
-import classes from './Profile.module.css'
+import classes from './Profile.module.css';
 import MyPosts from './MyPosts/MyPosts';
+import ProfileInfo from './ProfileInfo/ProfileInfo';
 function Profile(){
     return(
         <div >
-            <div className={classes.img__box}>
-                <img className={classes.img} src="https://images6.alphacoders.com/568/568500.jpg"/>
-            </div>
-            <div>
-            ava+description
-            </div>
+            <ProfileInfo/>
             <MyPosts/>
         </div>
     );
