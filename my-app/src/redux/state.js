@@ -1,3 +1,4 @@
+
 export const state ={
 
     profilePage:{
@@ -19,4 +20,14 @@ export const state ={
             {id:3, name:'Махмуд'},
         ],
     },
+};
+
+export function addPost(postMessage){
+    
+    const newPost ={
+        id: 5,
+        message: postMessage,
+        likesCount: 0,
+    };
+    state.profilePage.postsData.push(newPost);
 };

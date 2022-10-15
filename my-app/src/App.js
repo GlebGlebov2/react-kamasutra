@@ -6,7 +6,6 @@ import Navbar from './components/Navbar/Navbar'
 import Profile from './components/Profile/Profile';
 import Dialogs from './components/Dialogs/Dialogs';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { state } from './redux/state';
 
 function App(props) {
 
@@ -33,8 +32,7 @@ function App(props) {
             <Route path="/dialogs/*" element= {
               <Dialogs state={props.state.messagesPage} />}/>
             <Route path="/profile" element= { 
-              <Profile state={props.state.profilePage} />} />
-
+              <Profile state={props.state.profilePage} addPost={props.addPost}/>} />
         </Routes>
       </div>
     </div>
