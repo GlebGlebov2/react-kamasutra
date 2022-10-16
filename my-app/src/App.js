@@ -32,7 +32,9 @@ function App(props) {
             <Route path="/dialogs/*" element= {
               <Dialogs state={props.state.messagesPage} />}/>
             <Route path="/profile" element= { 
-              <Profile state={props.state.profilePage} addPost={props.addPost}/>} />
+              <Profile state={props.state.profilePage} 
+              addPost={props.addPost}
+              updateNewPostText={props.updateNewPostText}/>}/>
         </Routes>
       </div>
     </div>
