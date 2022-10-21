@@ -8,15 +8,13 @@ function MyPosts(props){
     const postsElements = props.postsData.map(p=><Post message={p.message} likesCount={p.likesCount} key={p.id}/>);
 
     function addPost(){
-        // const text = newPostElement.current.value;
-        props.addPost();
-        // props.updateNewPostText('оуо оуо оуо рядом петино говно');
+        props.dispatch({type:'ADD-POST'});
     };
-    
     
     function onPostChange(){
         const text = newPostElement.current.value;
-        props.updateNewPostText(text);
+        let action = {type: 'UPDATE-NEW-POST-TEXT', newText:'text'}
+        props.dispatch(action);
     };
     
     return(

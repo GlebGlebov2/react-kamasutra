@@ -17,24 +17,12 @@ function App(props) {
       <Navbar/>
       <div className='app-wrapper-content'>
         <Routes>
-
-            {/* <Route path="/profile" element={<Profile/>}/> */}
-            {/* <Route path="/dialogs/*" element={<Dialogs/>}/> */}
-            {/* <Route path="/dialogs/*" element= {
-              <Dialogs 
-                dialogsData = {props.state.messagesPage.dialogsData} 
-                messagesData = {props.state.messagesPage.messagesData} />
-            }/>
-            <Route path="/profile" element= { 
-              <Profile 
-                postsData = {props.state.profilePage.postsData} />
-            } /> */}
             <Route path="/dialogs/*" element= {
               <Dialogs state={props.state.messagesPage} />}/>
             <Route path="/profile" element= { 
               <Profile state={props.state.profilePage} 
               addPost={props.addPost}
-              updateNewPostText={props.updateNewPostText}/>}/>
+              dispatch={props.dispatch}/>}/>
         </Routes>
       </div>
     </div>
